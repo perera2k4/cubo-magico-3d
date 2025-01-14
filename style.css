@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1F1F1F;
+    overflow: hidden;
+  }
+
+  .cena {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+  }
+
+  .cubo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-30deg);
+  }
+
+  .face-cubo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .face-cubo div {
+    border: 1px solid #000;
+  }
+
+  .frente  { transform: rotateY(0deg) translateZ(100px); }
+  .fundo   { transform: rotateY(180deg) translateZ(100px); }
+  .direita  { transform: rotateY(90deg) translateZ(100px); }
+  .esquerda   { transform: rotateY(-90deg) translateZ(100px); }
+  .topo    { transform: rotateX(90deg) translateZ(100px); }
+  .baixo { transform: rotateX(-90deg) translateZ(100px); }
+
+  .frente div { background: red; }
+  .fundo div { background: orange; }
+  .direita div { background: blue; }
+  .esquerda div { background: green; }
+  .topo div { background: white; }
+  .baixo div { background: yellow; }
