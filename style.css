@@ -6,47 +6,80 @@ body {
     height: 100vh;
     background-color: #1F1F1F;
     overflow: hidden;
-  }
+}
 
-  .cena {
-    width: 200px;
-    height: 200px;
-    perspective: 800px;
-  }
+.cena {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+}
 
-  .cubo {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(-30deg);
-  }
+.cubo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-30deg);
+}
 
-  .face-cubo {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid #000;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
+.face-cubo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
 
-  .face-cubo div {
-    border: 1px solid #000;
-  }
+.face-cubo div {
+  border: 1px solid #000;
+}
 
-  .frente  { transform: rotateY(0deg) translateZ(100px); }
-  .fundo   { transform: rotateY(180deg) translateZ(100px); }
-  .direita  { transform: rotateY(90deg) translateZ(100px); }
-  .esquerda   { transform: rotateY(-90deg) translateZ(100px); }
-  .topo    { transform: rotateX(90deg) translateZ(100px); }
-  .baixo { transform: rotateX(-90deg) translateZ(100px); }
+.frente  { transform: rotateY(0deg) translateZ(100px); }
+.fundo   { transform: rotateY(180deg) translateZ(100px); }
+.direita  { transform: rotateY(90deg) translateZ(100px); }
+.esquerda   { transform: rotateY(-90deg) translateZ(100px); }
+.topo    { transform: rotateX(90deg) translateZ(100px); }
+.baixo { transform: rotateX(-90deg) translateZ(100px); }
 
-  .frente div { background: red; }
-  .fundo div { background: orange; }
-  .direita div { background: blue; }
-  .esquerda div { background: green; }
-  .topo div { background: white; }
-  .baixo div { background: yellow; }
+.frente div { background: red; }
+.fundo div { background: orange; }
+.direita div { background: blue; }
+.esquerda div { background: green; }
+.topo div { background: white; }
+.baixo div { background: yellow; }
+
+
+
+.rodape {
+    font-family: 'Consolas';
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.rodape a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.rodape i {
+    transition: transform 0.2s;
+}
+
+.rodape i:hover {
+    transform: scale(1.2);
+    color: #67CBFD;
+}
